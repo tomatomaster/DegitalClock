@@ -44,7 +44,7 @@ public class NoBorder extends Frame {
 	 * Calls initializations and starts animation thread
 	 * @param fr
 	 */
-	public NoBorder(Frame fr) {
+	public NoBorder() {
 		super();
 		AnimationThread animation = new AnimationThread(this);
 		animation.start();
