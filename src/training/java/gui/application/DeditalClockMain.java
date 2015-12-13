@@ -1,3 +1,4 @@
+package training.java.gui.application;
 import java.awt.Color;
 import java.awt.Frame;
 

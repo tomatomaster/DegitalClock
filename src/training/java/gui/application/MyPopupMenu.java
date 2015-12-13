@@ -1,3 +1,4 @@
+package training.java.gui.application;
 import java.awt.Menu;
 import java.awt.PopupMenu;
 
