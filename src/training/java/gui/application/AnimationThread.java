@@ -5,19 +5,19 @@ package training.java.gui.application;
 
 
 /**
- * Draw NoBorder Animation.
+ * Animation Thread.
  * @author ono
  *
  */
 public class AnimationThread extends Thread {
 
-	NoBorder window;
+	ApplicationWindow window;
 
 	/**
 	 * 
 	 * @param window
 	 */
-	AnimationThread(NoBorder window) {
+	AnimationThread(ApplicationWindow window) {
 		super();
 		this.window = window;
 	}

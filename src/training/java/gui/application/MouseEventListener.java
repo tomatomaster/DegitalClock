@@ -3,12 +3,16 @@ import java.awt.Point;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-
+/**
+ * 
+ * @author ono
+ *
+ */
 public class MouseEventListener extends MouseAdapter {
-	NoBorder window;
+	ApplicationWindow window;
 	private final Point startPt = new Point();
 
-	public MouseEventListener(NoBorder window) {
+	public MouseEventListener(ApplicationWindow window) {
 		this.window = window;
 	}
 

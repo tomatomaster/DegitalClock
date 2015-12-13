@@ -14,7 +14,7 @@ import java.awt.event.MouseEvent;
 import training.java.gui.application.inf.WindowPropertyManager;
 
 
-public class NoBorder extends Frame {
+public class ApplicationWindow extends Frame {
 
 	//Window info
 	private static final long	serialVersionUID	= -8831569702907811356L;
@@ -45,7 +45,7 @@ public class NoBorder extends Frame {
 	 * Calls initializations and starts animation thread
 	 * @param fr
 	 */
-	public NoBorder() {
+	public ApplicationWindow() {
 		super();
 		AnimationThread animation = new AnimationThread(this);
 		animation.start();

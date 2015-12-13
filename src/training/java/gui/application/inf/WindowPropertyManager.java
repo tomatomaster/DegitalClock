@@ -3,6 +3,14 @@ package training.java.gui.application.inf;
 import java.awt.Color;
 import java.awt.Font;
 
+/**
+ * Manage window properties.
+ * Background Color
+ * Font Color
+ * Font Size
+ * @author ono
+ *
+ */
 public class WindowPropertyManager {
 	private Color bgColor;
 	private Color fontColor;

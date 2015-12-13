@@ -7,7 +7,11 @@ import training.java.gui.uiparts.menu.FontColorMenu;
 import training.java.gui.uiparts.menu.FontSizeMenu;
 import training.java.gui.uiparts.menu.FontTypeMenu;
 
-
+/**
+ * Manage PopupMenu
+ * @author ono
+ *
+ */
 public class MyPopupMenu extends PopupMenu {
 
 	/**

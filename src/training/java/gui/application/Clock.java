@@ -5,6 +5,11 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Manage Clock information.
+ * @author ono
+ *
+ */
 public class Clock {
 	static private Calendar now = null;
 	static final private Map<String, Integer> timeMap = new HashMap<String, Integer>();
