@@ -20,9 +20,9 @@ public class Clock {
 	 */
 	public Map<String, Integer> getTimeMap(){
 		now = Calendar.getInstance();
-		int h = now.get(now.HOUR_OF_DAY);
-		int m = now.get(now.MINUTE);
-		int s = now.get(now.SECOND);
+		int h = now.get(Calendar.HOUR_OF_DAY);
+		int m = now.get(Calendar.MINUTE);
+		int s = now.get(Calendar.SECOND);
 		timeMap.put("hour", h);
 		timeMap.put("minutes", m);
 		timeMap.put("second", s);

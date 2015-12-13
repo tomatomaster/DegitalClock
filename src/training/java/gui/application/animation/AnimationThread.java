@@ -1,4 +1,6 @@
-package training.java.gui.application;
+package training.java.gui.application.animation;
+
+import training.java.gui.application.ApplicationWindow;
 
 
 
@@ -17,7 +19,7 @@ public class AnimationThread extends Thread {
 	 * 
 	 * @param window
 	 */
-	AnimationThread(ApplicationWindow window) {
+	public AnimationThread(ApplicationWindow window) {
 		super();
 		this.window = window;
 	}
