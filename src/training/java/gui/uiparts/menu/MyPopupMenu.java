@@ -1,11 +1,6 @@
-package training.java.gui.application;
+package training.java.gui.uiparts.menu;
 import java.awt.Menu;
 import java.awt.PopupMenu;
-
-import training.java.gui.uiparts.menu.BackGroundColorMenu;
-import training.java.gui.uiparts.menu.FontColorMenu;
-import training.java.gui.uiparts.menu.FontSizeMenu;
-import training.java.gui.uiparts.menu.FontTypeMenu;
 
 /**
  * Manage PopupMenu

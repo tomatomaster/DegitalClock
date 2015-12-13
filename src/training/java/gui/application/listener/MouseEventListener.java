@@ -1,7 +1,9 @@
-package training.java.gui.application;
+package training.java.gui.application.listener;
 import java.awt.Point;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+
+import training.java.gui.application.ApplicationWindow;
 
 /**
  * 

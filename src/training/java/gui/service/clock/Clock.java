@@ -1,4 +1,4 @@
-package training.java.gui.application;
+package training.java.gui.service.clock;
 
 
 import java.util.Calendar;

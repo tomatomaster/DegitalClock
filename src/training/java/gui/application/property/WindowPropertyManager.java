@@ -1,4 +1,4 @@
-package training.java.gui.application.inf;
+package training.java.gui.application.property;
 
 import java.awt.Color;
 import java.awt.Font;

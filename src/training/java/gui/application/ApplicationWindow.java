@@ -11,7 +11,10 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 import training.java.gui.application.animation.AnimationThread;
-import training.java.gui.application.inf.WindowPropertyManager;
+import training.java.gui.application.listener.MouseEventListener;
+import training.java.gui.application.property.WindowPropertyManager;
+import training.java.gui.service.clock.Clock;
+import training.java.gui.uiparts.menu.MyPopupMenu;
 
 
 public class ApplicationWindow extends Frame {
@@ -27,7 +30,7 @@ public class ApplicationWindow extends Frame {
 	Clock clock = new Clock();
 
 	//Menu info
-	MyPopupMenu popUpMenu;
+	public MyPopupMenu popUpMenu;
 
 	//For use double buffering
 	Dimension dimension;

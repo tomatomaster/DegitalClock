@@ -8,7 +8,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
 
-import training.java.gui.application.inf.WindowPropertyManager;
+import training.java.gui.application.property.WindowPropertyManager;
 
 
 public final class FontColorMenu extends Menu implements ActionListener {
