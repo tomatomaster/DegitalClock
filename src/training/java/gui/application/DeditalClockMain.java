@@ -1,5 +1,7 @@
 package training.java.gui.application;
 
+import training.java.gui.uiparts.menu.dialog.SettingDialog;
+
 
 /**
  * Main Function
@@ -8,7 +10,7 @@ package training.java.gui.application;
  */
 public class DeditalClockMain {
 
-	static ApplicationWindow	window;
+	static ApplicationWindow	 window;
 
 	public static void main(String[] args) {
 		window = new ApplicationWindow();
