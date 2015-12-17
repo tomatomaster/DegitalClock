@@ -23,9 +23,6 @@ public class MouseEventListener extends MouseAdapter {
 		//If Windosw run this app, isPopupTrigger is true
 		int x = e.getX();
 		int y = e.getY();
-		if(e.isPopupTrigger()) {
-			window.popUpMenu.show(window, x, y);
-		}
 		Point eventLocationOnScreen = e.getLocationOnScreen();
 		window.setLocation(eventLocationOnScreen.x - startPt.x,
 				eventLocationOnScreen.y - startPt.y);
@@ -36,9 +33,6 @@ public class MouseEventListener extends MouseAdapter {
 		//If iOS run this app, isPopupTrigger is true
 		int x = e.getX();
 		int y = e.getY();
-		if(e.isPopupTrigger()) {
-			window.popUpMenu.show(window, x, y);
-		}
 		startPt.setLocation(e.getPoint());
 	}
 	
@@ -53,8 +47,5 @@ public class MouseEventListener extends MouseAdapter {
 	public void mouseClicked(MouseEvent e) {
 		int x = e.getX();
 		int y = e.getY();
-		if(e.isPopupTrigger()) {
-			window.popUpMenu.show(window, x, y);
-		}
 	}
 }

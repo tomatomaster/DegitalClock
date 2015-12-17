@@ -7,6 +7,7 @@ import java.awt.Font;
 import java.awt.Frame;
 import java.awt.Graphics;
 import java.awt.Image;
+import java.awt.MenuBar;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
@@ -25,18 +26,14 @@ public class ApplicationWindow extends Frame {
 	private static int HEIGHT= 500;
 	private static final int default_x = 200;
 	private static final int default_y = 200;
-
 	//Clock info
 	Clock clock = new Clock();
-
 	//Menu info
-	public MyPopupMenu popUpMenu;
-
+	MenuBar menuBar = new MenuBar();
 	//For use double buffering
 	Dimension dimension;
 	Image bImage;
 	Graphics bg;
-
 	//GUI info
 	WindowPropertyManager wpm = WindowPropertyManager.getInstance();
 	public static Color bgColor   = Color.WHITE;
@@ -46,7 +43,6 @@ public class ApplicationWindow extends Frame {
 
 	/**
 	 * Calls initializations and starts animation thread
-	 * @param fr
 	 */
 	public ApplicationWindow() {
 		super();
@@ -89,8 +85,7 @@ public class ApplicationWindow extends Frame {
 		});
 
 		//Add PopUpMenu
-		popUpMenu = new MyPopupMenu(); 
-		add(popUpMenu);
+		setMenuBar(menuBar);
 	}
 
 	/**
