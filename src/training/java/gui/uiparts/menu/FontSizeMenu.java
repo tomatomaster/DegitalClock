@@ -10,7 +10,7 @@ import java.util.List;
 
 import training.java.gui.application.property.WindowPropertyManager;
 
-final public class FontSizeMenu extends Menu implements ActionListener {
+final class FontSizeMenu extends Menu implements ActionListener {
 
 	/**
 	 * 

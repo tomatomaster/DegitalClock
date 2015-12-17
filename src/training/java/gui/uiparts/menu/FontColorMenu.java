@@ -11,7 +11,7 @@ import java.util.List;
 import training.java.gui.application.property.WindowPropertyManager;
 
 
-public final class FontColorMenu extends Menu implements ActionListener {
+final class FontColorMenu extends Menu implements ActionListener {
 
 	/**
 	 * 

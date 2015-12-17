@@ -10,7 +10,7 @@ import java.util.List;
 
 import training.java.gui.application.property.WindowPropertyManager;
 
-public final class BackGroundColorMenu extends Menu implements ActionListener {
+final class BackGroundColorMenu extends Menu implements ActionListener {
 
 	/**
 	 * 

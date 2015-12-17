@@ -1,5 +1,5 @@
 package training.java.gui.application;
-import java.awt.Button;
+
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
@@ -8,14 +8,13 @@ import java.awt.Frame;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.MenuBar;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 
 import training.java.gui.application.animation.AnimationThread;
 import training.java.gui.application.listener.MouseEventListener;
 import training.java.gui.application.property.WindowPropertyManager;
 import training.java.gui.service.clock.Clock;
-import training.java.gui.uiparts.menu.MyPopupMenu;
+import training.java.gui.uiparts.menu.MyMenuBar;
+import training.java.gui.utils.MyWindowListener;
 
 
 public class ApplicationWindow extends Frame {
@@ -29,7 +28,7 @@ public class ApplicationWindow extends Frame {
 	//Clock info
 	Clock clock = new Clock();
 	//Menu info
-	MenuBar menuBar = new MenuBar();
+	MenuBar menuBar = new MyMenuBar();
 	//For use double buffering
 	Dimension dimension;
 	Image bImage;
@@ -62,29 +61,15 @@ public class ApplicationWindow extends Frame {
 		setLayout(new FlowLayout());
 		setBounds(default_x, default_y, 250, 250);
 		setSize(WIDTH, HEIGHT);
-
 		//Add Listeners
 		addMouseListener(new MouseEventListener(this));
+		addWindowListener(new MyWindowListener());
 	}
 
 	/**
 	 * set parameters related to Componets.
 	 */
 	private void setWindowComponent() {
-		//Add Buttons
-		//1. Exit Button
-		Button exitButton= new Button("Exit");
-		add(exitButton);
-		exitButton.addMouseListener(new MouseAdapter() {
-			public void mouseClicked(MouseEvent e) {
-				System.exit(0);
-			}
-			public void mousePressed(MouseEvent e) {
-				System.exit(0);
-			}
-		});
-
-		//Add PopUpMenu
 		setMenuBar(menuBar);
 	}
 
