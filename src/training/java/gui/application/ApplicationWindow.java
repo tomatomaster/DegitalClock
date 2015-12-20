@@ -1,13 +1,11 @@
 package training.java.gui.application;
 
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.Frame;
 import java.awt.Graphics;
 import java.awt.Image;
-import java.awt.MenuBar;
 
 import training.java.gui.application.animation.AnimationThread;
 import training.java.gui.application.listener.MouseEventListener;
@@ -21,23 +19,18 @@ public class ApplicationWindow extends Frame {
 
 	//Window info
 	private static final long	serialVersionUID	= -8831569702907811356L;
-	private static int WIDTH = 500;
-	private static int HEIGHT= 500;
-	private static final int default_x = 200;
-	private static final int default_y = 200;
-	//Clock info
-	Clock clock = new Clock();
-	//Menu info
-	MenuBar menuBar = new MyMenuBar();
+	private static int WIDTH = 800;
+	private static int HEIGHT= 400;
+
 	//For use double buffering
-	Dimension dimension;
 	Image bImage;
 	Graphics bg;
+	
 	//GUI info
 	WindowPropertyManager wpm = WindowPropertyManager.getInstance();
 	public static Color bgColor   = Color.WHITE;
 	public static Color fontColor = Color.RED;
-	public static int   fontSize  = 120; 
+	public static int   fontSize  = 80; 
 	public static Font  font      = new Font(Font.SERIF, Font.BOLD, fontSize);
 
 	/**
@@ -45,11 +38,12 @@ public class ApplicationWindow extends Frame {
 	 */
 	public ApplicationWindow() {
 		super();
-		AnimationThread animation = new AnimationThread(this);
-		animation.start();
 		init();
 		setWindowComponent();
 		setGuiInfo();
+		//Start Animation
+		AnimationThread animation = new AnimationThread(this);
+		animation.start();
 	}
 
 	/**
@@ -59,7 +53,9 @@ public class ApplicationWindow extends Frame {
 		//Set Window Layout etc...
 		setVisible(true);
 		setLayout(new FlowLayout());
-		setBounds(default_x, default_y, 250, 250);
+		final int default_x = 200;
+		final int default_y = 200;
+		setBounds(default_x, default_y, WIDTH, HEIGHT);
 		setSize(WIDTH, HEIGHT);
 		//Add Listeners
 		addMouseListener(new MouseEventListener(this));
@@ -70,7 +66,7 @@ public class ApplicationWindow extends Frame {
 	 * set parameters related to Componets.
 	 */
 	private void setWindowComponent() {
-		setMenuBar(menuBar);
+		setMenuBar(new MyMenuBar());
 	}
 
 	/**
@@ -136,8 +132,11 @@ public class ApplicationWindow extends Frame {
 		}
 		bg.setFont(font);
 		bg.setColor(fontColor);
-		bg.drawString(clock.getTimeString(), (this.getSize().width - font.getSize()*4)/2 , (getSize().height + font.getSize())/2);
-		this.setSize(font.getSize()*5, font.getSize()*2);
+		
+		int drawPosition_x = (this.getSize().width - font.getSize()*4)/2;
+		int drawPosition_y = (getSize().height + font.getSize())/2;
+		bg.drawString(Clock.getClockInstance().getTimeString(), drawPosition_x , drawPosition_y);
+		this.setSize(font.getSize()*6, font.getSize()*2);
 	}
 }
 

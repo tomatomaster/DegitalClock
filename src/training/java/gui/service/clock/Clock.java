@@ -13,6 +13,18 @@ import java.util.Map;
 public class Clock {
 	static private Calendar now = null;
 	static final private Map<String, Integer> timeMap = new HashMap<String, Integer>();
+	private static Clock clock = null;
+	
+	private Clock() {
+	}
+	
+	public static Clock getClockInstance() {
+		if(clock == null) {
+			clock = new Clock();
+			return clock;
+		} 
+		return clock;
+	}
 	
 	/**
 	 * get time and return 
